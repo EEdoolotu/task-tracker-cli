@@ -1,6 +1,9 @@
 import sys
 import json
 
+command = sys.argv[1]
+args = sys.argv[2:]
+
 def open_file(file):
     with open(f"{file}", "r") as file:
         tasks = json.load(f"{file}")
