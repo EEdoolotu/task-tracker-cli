@@ -1,8 +1,8 @@
 def add_task(args):
     pass
 
-def list_tasks(args):
-    pass
+def list_tasks(tasks, args):
+    print(tasks)
 
 def complete_task(args):
     pass
