@@ -2,7 +2,13 @@ def add_task(args):
     pass
 
 def list_tasks(tasks, args):
-    print(tasks)
+    complete = "[x]"
+    pending = "[ ]"
+    for task in tasks:
+        if task["completed"]:
+            print(f'{task["id"]}. {complete} {task["title"]}')
+        else:
+            print(f'{task["id"]}. {pending} {task["title"]}')
 
 def complete_task(args):
     pass
