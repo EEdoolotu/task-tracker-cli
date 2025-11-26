@@ -1,5 +1,11 @@
-def add_task(args):
-    pass
+def add_task(tasks, args):
+    new_task = {
+        "id": max((task["id"] for task in tasks), default=0) + 1,
+        "title": " ".join(args),
+        "completed" : False
+    }
+    tasks.append(new_task)
+    print(f'Task added: {new_task["id"]}. {new_task["title"]}')
 
 def list_tasks(tasks, args):
     complete = "[x]"
